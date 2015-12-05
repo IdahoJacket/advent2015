@@ -10,7 +10,7 @@ while True:
   used.add( ( x[0], y[0] ) )
   i = 0
   for d in l:
-    index = i % 2
+    index = 0
     if d == '<':
       x[index] -= 1
     elif d == '>':
