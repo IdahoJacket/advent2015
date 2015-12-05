@@ -5,9 +5,9 @@ while True:
   except EOFError:
     break
   
-  volume = (x*y*z)
-  smallestPerimeter = (x+x+y+y+z+z) - (max(x,y,z)*2)
+  area = 2 * ((x*y)+(x*z)+(y*z))
+  smallestSideArea = (x*y*z) / (max(x,y,z))
 
-  totalArea += volume + smallestPerimeter
+  totalArea += area + smallestSideArea
 
 print totalArea
