@@ -11,25 +11,20 @@ loop = 50
 
 for q in xrange(0,loop):
   result = ""
-  j = 0
-  prev = int(l[0])
+  prev = l[0]
   count = 0
-  while j < len(l):
-    #print "j=",j,"l[j]=",l[j]
-    i = int(l[j])
+  for j in xrange(0,len(l)):
+    i = l[j]
     if ( i == prev ):
       count += 1
-      #print "inc"
     else:
-      result += str( count ) + str( prev )
-      #print result
+      result += str( count ) + prev
       count = 1
       prev = i
     j += 1
   
 
-  result += str( count ) + str( i )
-  #print "Result ", result
+  result += str( count ) + i
   l = result
 
 print len(result)
